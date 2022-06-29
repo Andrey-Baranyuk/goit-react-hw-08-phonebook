@@ -1,3 +1,6 @@
-import { createAction } from "@reduxjs/toolkit";
+/* eslint-disable import/no-anonymous-default-export */
+import { createAction } from '@reduxjs/toolkit';
 
-export const changeFilter = createAction("contact/changeFilter");
+const changeFilter = createAction('phonebook/changeFilter');
+
+export default { changeFilter };

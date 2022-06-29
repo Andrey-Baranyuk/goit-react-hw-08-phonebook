@@ -1,12 +1,14 @@
-import { createSelector } from "@reduxjs/toolkit";
-import { selectContactsResult } from "./phonebookSlice";
+export const getLoading = state => state.phonebook.loading;
+export const getFilter = state => state.phonebook.filter
+export const getContacts = state => state.phonebook.contacts;
 
-export const getFilter = state => state.filter;
+export const getVisibleContacts = (state) => {
+  const contacts = getContacts(state);
+  const filter = getFilter(state);
 
-export const selectAllContacts = createSelector(
-  [selectContactsResult],
-  contactsResult => {
-    console.log(contactsResult.data);
-    return contactsResult?.data ?? [];
-  }
-);
+  const normalizedFilter = filter.toLowerCase();
+
+  return contacts.filter(({ name }) =>
+    name.toLowerCase().includes(normalizedFilter)
+  );
+};

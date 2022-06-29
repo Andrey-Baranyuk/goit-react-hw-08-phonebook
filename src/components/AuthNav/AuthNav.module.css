@@ -1,0 +1,10 @@
+.AuthWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  color: white;
+}

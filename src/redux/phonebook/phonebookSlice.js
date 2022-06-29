@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const phonebookApi = createApi({
   reducerPath: 'contactsApi',
-    baseQuery: fetchBaseQuery({ baseUrl:"https://61e42cd7fbee6800175eb21d.mockapi.io" }),
+    baseQuery: fetchBaseQuery({ baseUrl: "https://connections-api.herokuapp.com" }),
   tagTypes:['Contacts'],
   endpoints: builder => ({
     getContacts: builder.query({
@@ -13,7 +13,7 @@ export const phonebookApi = createApi({
           query: (name, phone) => ({
               url: '/contacts',
               method: 'POST',
-             body:name, phone
+             body:name,phone
           }),
              invalidatesTags:['Contacts']
       }),
@@ -27,7 +27,6 @@ export const phonebookApi = createApi({
   }),
 })
 
-export const selectContactsResult = phonebookApi.endpoints.getContacts.select();
 
 export const { useGetContactsQuery, useDeleteContactMutation, useAddContactMutation } = phonebookApi;
 

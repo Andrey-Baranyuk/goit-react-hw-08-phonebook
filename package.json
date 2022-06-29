@@ -2,8 +2,12 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Andrey-Baranyuk.io/goit-react-hw-07-phonebook/",
+  "homepage": "https://Andrey-Baranyuk.io/goit-react-hw-08-phonebook/",
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.8.5",
     "@reduxjs/toolkit": "^1.8.2",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -14,8 +18,12 @@
     "react-dom": "^18.0.0",
     "react-loader-spinner": "^5.1.5",
     "react-redux": "^8.0.2",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
+    "react-toastify": "^9.0.5",
     "redux-persist": "^6.0.0",
+    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.3"
   },
   "scripts": {
